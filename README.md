@@ -51,11 +51,17 @@ Integration Test:
 	IntegrationTest (full CSV → processing → CSV)
 	
 ## 🧱 Tech Stack
+
 Java 17
+
 Spring Boot
+
 OpenCSV
+
 Lombok
+
 JUnit 5
+
 
 ## 👨‍💻 Author
 Hassan Hanif
