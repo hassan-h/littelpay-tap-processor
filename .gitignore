@@ -48,3 +48,5 @@ spring.log
 *.tmp
 *.temp
 *.orig
+
+.factorypath
