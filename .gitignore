@@ -1,0 +1,50 @@
+# Java build artifacts
+/target/
+*.class
+
+# Logs
+*.log
+
+# Eclipse
+*.classpath
+*.project
+*.settings/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+!.mvn/wrapper/maven-wrapper.jar
+
+# VS Code
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Maven
+.mvn/timing.properties
+.settings/
+dependency-reduced-pom.xml
+
+# Environment-specific
+.env
+*.local
+*.bak
+*.swp
+*.swo
+
+# Spring Boot specific
+spring.log
+
+# Test reports
+/test-output/
+/surefire-reports/
+/jacoco.exec
+
+# Temporary files
+*.tmp
+*.temp
+*.orig
