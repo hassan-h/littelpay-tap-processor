@@ -16,28 +16,6 @@ This project simulates fare calculation for a public transport system using tap-
 
 ---
 
-## 🏗️ Project Structure
-
-src/
-└── main/
-	├── java/com/littlepay/app/
-	│ ├── config/ # Loads fare rules via @ConfigurationProperties and Util Beans
-	│ ├── enums/ # TapType, TripStatus
-	│ ├── runner/ # TapProcessingRunner
-	│ ├── model/ # Tap, Trip
-	│ ├── service/ # TripService, FareCalculator
-	│ └── util/ # CsvReader, CsvWriter, Constants
-	└── resources/
-	  ├── application.yml # Configurable file paths & fare rules
-	  └── taps.csv # Sample input
-	test/
-	├── java/com/littlepay/app/
-	│ └── FareCalculatorTest, TripServiceTest, IntegrationTest
-	└── resources/
-	  └── taps.csv # Sample input
-	  
-
-
 ## 🔧 Build the Project
 
 mvn clean package
@@ -65,9 +43,11 @@ mvn spring-boot:run -Dspring-boot.run.arguments="path/to/taps.csv path/to/trips.
 mvn test
 
 Unit Tests:
+	
 	FareCalculatorTest
 	TripServiceTest
 Integration Test:
+	
 	IntegrationTest (full CSV → processing → CSV)
 	
 ## 🧱 Tech Stack
