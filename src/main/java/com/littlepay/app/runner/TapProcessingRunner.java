@@ -14,6 +14,9 @@ import com.littlepay.app.util.CsvReader;
 import com.littlepay.app.util.CsvWriter;
 import com.opencsv.exceptions.CsvException;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Component
 public class TapProcessingRunner implements CommandLineRunner{
 	
@@ -37,37 +40,37 @@ public class TapProcessingRunner implements CommandLineRunner{
 
     @Override
     public void run(String... args) {
-    	System.out.println("Littlepay Coding Exercise Application Started.");
+    	log.info("Littlepay Coding Exercise Application Started.");
     	
-    	System.out.println("Args received:");
+    	log.info("Args received:");
         for (int i = 0; i < args.length; i++) {
-            System.out.printf("args[%d] = %s%n", i, args[i]);
+        	log.info("args[{}] = {}", i, args[i]);
         }
 
         String inputFilePath = args.length > 0 ? args[0] : inputFile;
         String outputFilePath = args.length > 1 ? args[1] : outputFile;
 
         try {
-            System.out.println("Reading taps from: " + inputFilePath);
+        	log.info("Reading taps from: {}", inputFilePath);
             List<Tap> taps = tapReader.read(inputFilePath);
-            System.out.println("Successfully read " + taps.size() + " taps.");
+            log.info("Successfully read {} taps.", taps.size());
 
-            System.out.println("Processing taps...");
+            log.info("Processing taps...");
             List<Trip> trips = tripService.generateTrips(taps);
-            System.out.println("Generated " + trips.size() + " trips.");
+            log.info("Generated {} trips.", trips.size());
 
-            System.out.println("Writing trips to: " + outputFilePath);
+            log.info("Writing trips to: {}", outputFilePath);
             tripWriter.write(outputFilePath, trips);
-            System.out.println("Trips written successfully to " + outputFilePath);
+            log.info("Trips written successfully to {}", outputFilePath);
 
         } catch (IOException e) {
-            System.err.println("File I/O error: " + e.getMessage());
+        	log.error("File I/O error: {}", e.getMessage());
             e.printStackTrace();
         } catch (CsvException e) {
-            System.err.println("CSV parsing/writing error: " + e.getMessage());
+        	log.error("CSV parsing/writing error: {}", e.getMessage());
             e.printStackTrace();
         } catch (Exception e) {
-            System.err.println("An unexpected error occurred: " + e.getMessage());
+        	log.error("An unexpected error occurred: {}", e.getMessage());
             e.printStackTrace();
         }
     }

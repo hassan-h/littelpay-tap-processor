@@ -1,8 +1,11 @@
-app:
-  input-file: src/main/resources/taps.csv
-  output-file: src/main/resources/trips.csv
-fares:
-  rules:
-    Stop1_Stop2: 3.25
-    Stop2_Stop3: 5.50
-    Stop1_Stop3: 7.30
+spring:
+  application:
+    name: LittlepayApp
+  profiles:
+    active: dev
+
+logging:
+  level:
+    root: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - [%X{spring.profiles.active}] %msg%n"
