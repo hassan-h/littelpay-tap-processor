@@ -30,11 +30,11 @@ mvn spring-boot:run
 
 OR
 
-java -jar target\tap-processor-1.0.0.jar
+java -jar target\littlepay-tap-processor-1.0.0.jar
 
 Option 2: Provide Custom File Paths
 
-java -jar target/tap-processor-1.0.0.jar path/to/taps.csv path/to/trips.csv
+java -jar target/littlepay-tap-processor-1.0.0.jar path/to/taps.csv path/to/trips.csv
 
 OR
 
