@@ -11,7 +11,7 @@ This project simulates fare calculation for a public transport system using tap-
 - Calculates fare using configurable rules from `application.yml`
 - Outputs trips to a CSV file
 - Robust error handling and input validation
-- Unit + Integration tests using JUnit 5 and Mockito
+- Unit + Integration tests using JUnit 5
 - Extensible, modular, and clean Spring Boot structure
 
 ---
