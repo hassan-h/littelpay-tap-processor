@@ -2,7 +2,7 @@
 
 This project simulates fare calculation for a public transport system using tap-on/tap-off data. It reads a CSV of tap events, calculates fare and trip status, and writes trip summaries into another CSV file.
 
-NOTE: Please note that parts of the codebase are intentionally crafted to reflect enterprise-grade development practices and architectural considerations.
+**NOTE:** Please note that parts of the codebase are intentionally crafted to reflect enterprise-grade development practices and architectural considerations.
 
 ---
 
