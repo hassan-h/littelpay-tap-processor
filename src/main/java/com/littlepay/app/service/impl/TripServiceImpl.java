@@ -41,6 +41,7 @@ public class TripServiceImpl implements TripService {
         taps.sort(Comparator.comparing(Tap::getDateTimeUTC));
 
         // 2. Process each tap in order
+        //Assuming taps is without anomalies 
         for (Tap current : taps) {
             String key = current.getPan()
                        + "|" + current.getBusID()
