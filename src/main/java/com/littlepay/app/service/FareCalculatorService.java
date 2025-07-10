@@ -5,6 +5,6 @@ import java.math.BigDecimal;
 import com.littlepay.app.model.Tap;
 
 public interface FareCalculatorService {
-    BigDecimal calculateFare(Tap onTap, Tap offTap);
-    BigDecimal calculateFare(Tap onTap); 
+    public BigDecimal calculateFare(Tap onTap, Tap offTap);
+    public BigDecimal calculateFare(Tap onTap); 
 }
